@@ -1,6 +1,6 @@
 class resolver (
-	$search = resolver::params::search,
-	$nameservers = resolver::params::nameservers,
+	$search = $resolver::params::search,
+	$nameservers = $resolver::params::nameservers,
 ) inherits resolver::params {
 
 file { '/etc/resolv.conf':

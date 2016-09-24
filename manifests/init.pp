@@ -3,6 +3,9 @@ class resolver (
 	$nameservers = $resolver::params::nameservers,
 ) inherits resolver::params {
 
+validate_array($search)
+validate_array($nameservers)
+
 file { '/etc/resolv.conf':
      ensure  => file,
      owner   => 'root',
